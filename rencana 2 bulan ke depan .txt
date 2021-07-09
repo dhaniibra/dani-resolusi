@@ -6,3 +6,4 @@ html
 css
 ikan 
 ayam
+sapi  kambing 
