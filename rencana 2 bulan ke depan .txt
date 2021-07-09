@@ -7,3 +7,5 @@ css
 ikan 
 ayam
 sapi  kambing 
+buaya
+harimau
