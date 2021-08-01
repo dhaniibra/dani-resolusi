@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign/login</title>
+    
+<style>
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.menu {
+  background: #444;
+  margin: 0%;
+  padding: 0%;
+}
+
+hr {
+  margin-bottom: 20px;
+  border: solid#ddd;
+}
+.list {
+  display: inline-block;
+  padding: 20px;
+}
+.list :hover {
+  background: #333;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.menu .list a {
+  color: white;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  padding: 0%;
+  margin: 0%;
+  line-height: 1.5;
+  color: #222;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #222;
+  margin: 20px;
+  border-radius: 10px;
+  
+}
+.form-group {
+  margin-bottom: 10px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+
+.form-group .form {
+  border-radius: 7px;
+  height: 30px;
+  width: 100%;
+  font-size: 17px;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+.button {
+  padding-left: 21px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 21px;
+
+  border: none;
+  background: #444;
+  color: #fff;
+  border-radius: 7px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button:hover{
+    background: lightslategray;
+    padding: 15px;
+
+}
+
+
+.wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+.countainer {
+  width: 1200px;
+  margin: auto;
+}
+
+</style>
+
+
+</head>
+<body>
+    <ol class="menu">
+        <div class="countainer">
+            <li class="list"><a href="index.html">GO HOME</a></li>
+            <li class="list"><a href="about.html">about</a></li>
+            <li class="list"> <a href="projrct.html">owner</a></li>
+            <li class="list"> <a href="login.html">login</a></li>
+            <li class="list"> <a href="contact.html">contact us</a></li>
+        </div>
+    </ol>
+
+    <div class="wrapper">
+    <div class="card">
+        <h1 class="card-title"> SIGN/LOGIN</h1>
+        
+       <hr>
+       <form action="#">
+        <div class="form-group">
+            <label for="email">email</label> 
+        <input type="text" placeholder="email address" id="email address"class="form" required>
+        </div>
+        <div class="form-group">
+             <label for="password">password</label>
+             <input type="password" placeholder="password" id="password" class="form" required>
+       </div>
+
+
+      <button type="submit" class="button">Login <i class="fas fa-sign-in-alt"></i></button>
+    </form>
+    </div> <!--card-->
+        
+        
+</body>
+</html>
