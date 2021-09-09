@@ -1,69 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>learn css</title>
-  <link rel="stylesheet" href="style.css">
- 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>half moon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7579de);
+  overflow-x: hidden;
+}
+#header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#header .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .navigation li {
+  margin-left: 20px;
+  list-style: none;
+}
+#header .navigation li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li.active {
+  background: #fff;
+  color: #2b1055;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #2b1055, transparent);
+  z-index: 1000;
+}
+section img#moon {
+  mix-blend-mode: screen;
+}
+section img#mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  right: -350px;
+  align-items: center;
+}
+#btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #1c0552;
+  display: flex;
+  z-index: 9;
+  transform: translateY(100px);
+}
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #2b1055;
+}
+.sec h2 {
+  font-size: 3.5em;
+}
+.sec p {
+  font-size: 1em;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  #hedaer {
+    padding: 20px;
+  }
+  #header .logo {
+    font-size: 1.5em;
+  }
+  #header .navigation {
+    display: none;
+  }
+  #header .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: #2b1055;
+  }
+  #header .navigation li {
+    margin-left: 0;
+  }
+  #header .navigation li a {
+    font-size: 1.5em;
+    margin: 5px 0;
+    display: inline-block;
+    border-radius: 30px;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url(menu.png);
+    z-index: 1000;
+  }
+
+  .toggle.active {
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url(close.png);
+    background-size: 30px;
+  }
+}
+
+    </style>
+  
 </head>
 <body>
-  <div class="navigation">
-    <a href="#" class="navigation-brand">web star</a>
-    <div class="navigation-list">
-      <a href="index.html" class="navigation-list-item active">home</a>
-      <a href="register.html" class="navigation-list-item">tell me</a>
-      <a href="about.html" class="navigation-list-item">register</a>
+    <header id="header">
+        <a href="#" class="logo">night vibes</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="#" class="active">home</a></li>
+            <li><a href="#">about</a></li>
+           <li><a href="#">sign</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+        
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+         <img src="moon.png" id="moon">
+         <img src="gunung.png" id="gunung">
+         <h2 id="text">half moon</h2>
+         <a href="#" id="btn">search</a>
+         <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>
+            anomali dan singularitas
+        </h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet excepturi laborum magnam modi. Ut maiores voluptas autem non quibusdam dolore omnis obcaecati, amet nemo animi quod facilis dignissimos atque explicabo accusantium quae itaque vitae, aut voluptates incidunt quasi aperiam. Dolorem quia delectus quidem consequatur eius in omnis obcaecati iure exercitationem vero, officia deleniti debitis aperiam fuga ratione aliquid? Reprehenderit, voluptatibus explicabo autem mollitia ipsam nam exercitationem cum quisquam tempore consequatur, aspernatur voluptatem dolorum est totam nisi repellat aliquam sed deserunt eligendi velit natus, impedit beatae. Nobis maxime reiciendis quisquam soluta!<br><br>
+          <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias, odio repellat eum sed eaque reiciendis quis qui sit. Expedita sint ex impedit tenetur voluptatum, temporibus quae qui iure delectus.
+          <br>
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores velit rerum ratione similique officiis labore iure quibusdam ducimus itaque, nesciunt dignissimos, perspiciatis explicabo adipisci recusandae consectetur! Magnam repellendus omnis molestias doloribus cumque quidem quos, dolores enim assumenda officiis inventore vel libero placeat consectetur, eos voluptatem illum autem deserunt, sunt ipsa quo explicabo corporis ipsum? Eos adipisci voluptatem quidem dolore ullam odit deleniti delectus sint, ratione molestias autem rerum accusamus voluptate praesentium animi aut laudantium sunt, veniam <br><br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum libero quas soluta aliquam, omnis minus perspiciatis, nemo veritatis totam tempora quo magni cumque dicta saepe suscipit ut iure, quae ea. Id inventore repellendus fugiat, officia voluptate, voluptatem voluptas a sit et quod commodi rerum corporis dicta impedit iste ipsa maxime? Id cum, accusamus illum fugiat accusantium ea similique ab vel sequi ducimus, a atque vero libero deserunt. Voluptas magni adipisci ipsum praesentium, animi alias culpa quis, atque aliquam quia deserunt blanditiis voluptates ducimus porro suscipit voluptatibus ad, assumenda aperiam!</p>
     </div>
+    <script>
+        let stars = document.getElementById ('stars')
+        let moon = document.getElementById ('moon')
+        let gunung = document.getElementById ('gunung')
+        let text = document.getElementById ('text')
+        let btn = document.getElementById ('btn')
+        let mountains_front = document.getElementById ('mountains_front')
+        let header = document.getElementById ('header')
 
-  </div>
-  <div class="countainer">
-    <div class="row">
-      <div class="header-description">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt.
-        </div>
-      </div>
-  </div>
-  <div class="countainer">
-    <div class="content">
-    <h1 class="card-title"> dhani</h1>
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga dolorum ut id fugit placeat velit qui, iste nostrum? Labore porro aspernatur, sequi architecto possimus nobis dolorem aliquam sint earum, deleniti, aperiam illum quibusdam repellendus. Vero excepturi sapiente non nulla cupiditate incidunt eum optio, at nesciunt adipisci, saepe nam, inventore minus! Facere, natus quasi! Velit perferendis laboriosam autem cumque, aliquam veritatis expedita ut ratione omnis incidunt a molestias quam eaque enim dolor quasi? Vero accusamus consequuntur harum sint quas impedit, quia modi maxime voluptates eos consequatur, autem quisquam doloremque maiores eum.
-    </div>    
-    <br>
-    <h2>panas banget woi</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde alias facilis enim vel doloribus reiciendis magni illum! Sapiente quod consequatur aperiam nesciunt vel labore, sint id earum iusto provident beatae, laudantium adipisci est, voluptas distinctio! Sunt sed similique maxime quaerat accusantium suscipit! Labore suscipit, aliquid dolorem eveniet placeat accusamus expedita porro esse architecto quaerat! Dicta, modi quis. Aut sapiente excepturi exercitationem, vel nobis, nemo perspiciatis fugit ratione incidunt magnam officia?</p>
-    <br>
-    <h2>capek banget kapan sukses</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, molestias. Et delectus incidunt rem aut voluptatibus quam debitis molestias quisquam ut sint magni dolorum, porro id? Cumque quasi repudiandae quos optio? Vitae tempore modi libero maxime voluptatum illum aliquid ratione! Mollitia explicabo sed, distinctio debitis, est veniam obcaecati aliquid aliquam perferendis libero reiciendis expedita modi pariatur unde tempora amet laborum. Pariatur voluptas facilis illo ullam aperiam architecto accusantium neque molestias sapiente voluptatem? Id sequi magnam iure!</p>
-    <p>
-      <br>
-     <h3> PENGERTIAN ANGKA PENTING</h3>
-     Angka Penting atau dalam istilah asing disebut Significant Figures adalah semua angka yang diperoleh dari hasil pengukuran.  </p>
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            gunung.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight= value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
 
-  <p>Angka penting terdiri dari angka pasti dan angka taksiran. Angka pasti adalah angka yang dapat dilihat atau dibaca pada skala alat ukur, sedangkan angka taksiran adalah angka yang tidak dapat dilihat atau dibaca pada skala alat ukur. Angka taksiran ini merupakan angka ketelitian alat ukur yang digunakan yang diperoleh dari ½ x skala terkecil alat ukur tersebut.</p>
-            </div> <!--content-->
-            <div class="sidebar">
-              <ul class="navbar-sidebar">
-                <li><a href="register.html">my first blog</a></li>
-                <li><a href="about.html">my second blog</a></li>
-                <li><a href="index.html">twiter</a></li>
-                <li><a href="#">instagram</a></li>
-                <li><a href="#">facebook</a></li>
-                
-              </ul>
-            </div>
-          </div><!--countainer-->
-          
-          <div class="footer">
-            <h4> design & built by Dani</h4>
-            <div>
-          &copy;copyright by Ibra Fauzi Ramadhani
-          </div>
+            const togglemenu = document.querySelector('.toggle');
+           const navigation = document.querySelector('.navigation');
+              togglemenu.onclick = function(){
+         togglemenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+              }
 
-          </div>  
-
-
+    </script>
 </body>
 </html>
