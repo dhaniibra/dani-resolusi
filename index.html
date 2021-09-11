@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>half moon</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/14a4e5be1e.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+    
     <style>
         * {
   margin: 0;
@@ -92,6 +95,84 @@ section img#moon {
 section img#mountains_front {
   z-index: 10;
 }
+  .search-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 50px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt {
+  padding: 0.6px;
+  width: 240px;
+}
+.search-btn {
+  color: #fff ;
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background:  #2b1055;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
+}
+.sm a{
+  display: inline-block;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color:#2b1055 ;
+  margin: 0 8px;
+  transition: .4s linear;
+  position: relative;
+
+}
+
+.sm a::before, .sm a::after{
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+
+.sm a:hover{
+  transform: scale(.8);
+}
+
+.sm a:hover::before{
+  border-left: 4px solid;
+  border-right: 4px solid;
+  transform: skewX(20deg);
+}
+.sm a:hover::after{
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+  transform: skewY(-20deg);
+
+}        
+        
 
 #text {
   position: absolute;
@@ -208,6 +289,20 @@ section img#mountains_front {
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores velit rerum ratione similique officiis labore iure quibusdam ducimus itaque, nesciunt dignissimos, perspiciatis explicabo adipisci recusandae consectetur! Magnam repellendus omnis molestias doloribus cumque quidem quos, dolores enim assumenda officiis inventore vel libero placeat consectetur, eos voluptatem illum autem deserunt, sunt ipsa quo explicabo corporis ipsum? Eos adipisci voluptatem quidem dolore ullam odit deleniti delectus sint, ratione molestias autem rerum accusamus voluptate praesentium animi aut laudantium sunt, veniam <br><br>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum libero quas soluta aliquam, omnis minus perspiciatis, nemo veritatis totam tempora quo magni cumque dicta saepe suscipit ut iure, quae ea. Id inventore repellendus fugiat, officia voluptate, voluptatem voluptas a sit et quod commodi rerum corporis dicta impedit iste ipsa maxime? Id cum, accusamus illum fugiat accusantium ea similique ab vel sequi ducimus, a atque vero libero deserunt. Voluptas magni adipisci ipsum praesentium, animi alias culpa quis, atque aliquam quia deserunt blanditiis voluptates ducimus porro suscipit voluptatibus ad, assumenda aperiam!</p>
     </div>
+    
+     <div class="sm">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-behance"></i></a>
+    </div>
+    <div class="search-box">
+      <input class="search-txt" type="text" name=""placeholder="type to search">
+      <a class="search-btn" href="#"> 
+        <i class="fas fa-search"></i> 
+      </a>
     <script>
         let stars = document.getElementById ('stars')
         let moon = document.getElementById ('moon')
